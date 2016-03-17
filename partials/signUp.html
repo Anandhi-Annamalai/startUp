@@ -1,0 +1,69 @@
+
+<html lang="en">
+<head>
+
+  <title>Homepage | Discover Bank</title> 
+  <script src="scripts/src/angular.min.js"></script>  
+  <script type="text/javascript" src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script> 
+  <script type="text/javascript" src="scripts/app.js"></script> 
+  <script type="text/javascript" src="scripts/router.js"></script>   
+  <script type="text/javascript" src="scripts/controller.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <script src="scripts/src/angular-messages.js"></script>
+  <link rel="stylesheet" href="css/utilize.css"> 
+</head>
+
+<body ng-app="validationApp">
+<div ng-controller="mainController" class="jumbotron">
+  <form id="obj" name="obj" novalidate>
+    <div class="form-group">
+    First Name: <input class="form-control"  name="fname" ng-model="obj.firstname" ng-model="name"
+          ng-minlength="5"
+          ng-maxlength="10" required>
+          <div class="help-block" ng-messages="obj.fname.$error" ng-if="obj.lname.$touched">
+            <p ng-message="minlength">Your name is too short.</p>
+            <p ng-message="maxlength">Your name is too long.</p>
+            <p ng-message="required">Your name is required.</p>
+          </div> 
+          </div>
+          <div class="form-group"> 
+    Last Name: <input class="form-control"  name="lname"  ng-model="obj.lastname" ng-model="name"
+          ng-minlength="5"
+          ng-maxlength="10" required> 
+          <div class="help-block" ng-messages="obj.lname.$error" ng-if="obj.lname.$touched">
+            <p ng-message="minlength">Your name is too short.</p>
+            <p ng-message="maxlength">Your name is too long.</p>
+            <p ng-message="required">Your name is required.</p>
+          </div>  
+          </div>
+          <div class="form-group">
+     User ID: <input class="form-control" name="uid"  ng-model="obj.userid" ng-model="name"
+          ng-minlength="5"
+          ng-maxlength="10" required>
+          <div class="help-block" ng-messages="obj.uid.$error" ng-if="obj.uid.$touched">
+            <p ng-message="minlength">Your name is too short.</p>
+            <p ng-message="maxlength">Your name is too long.</p>
+            <p ng-message="required">Your name is required.</p>
+          </div> 
+          </div>
+          <div class="form-group"> 
+    Email ID: <input class="form-control" name="email" ng-model="obj.email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required> 
+          <div class="help-block" ng-messages="obj.email.$error" ng-if="obj.email.$touched">
+            <p ng-message="pattern">Please enter a valid email address!</p>
+            <p ng-message="required">Your email is required.</p>
+          </div>
+          </div>
+          <div class="form-group">
+     Phone No: <input class="form-control" ng-model="obj.phoneNo" required>
+    Address: <input class="form-control" ng-model="obj.add" required> <br/><br/>    
+    <button type="submit" ng-click="storedata()">submit</button>  
+    </div> 
+    </div>
+
+</form>
+
+</body>
+</html>

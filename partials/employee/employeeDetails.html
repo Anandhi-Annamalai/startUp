@@ -1,0 +1,46 @@
+<div class="table-responsive" id="employeeDetails" style="height:900px;overflow: hidden;"> 
+
+        
+<div class="jumbotron">
+<div class="table-responsive">  
+<h1>Billing Details</h1>
+<span class="form-group form-inline">
+          Select to sort : <input type="text" class="form-control"ng-model="sortBy">
+        </span>
+		<span class="form-group form-inline" style="float:right">
+          Enter to search : <input type="text" class="form-control"ng-model="enteredValue">
+        </span>
+<table class="table table-striped">
+     <thead>
+  
+     <tr>
+      <td>Name</td>
+      <td>Address</td>
+      <td>Billablity</td>
+      <td>Joining Date</td>
+      <td>Billing Date</td>
+      <td>Billing Amount</td>
+      <td>Paid</td> 
+	  <td>Edit/Update</td> 
+	  <td>Delete</td> 
+     </tr>
+     </thead>
+     <tbody>
+      <tr ng-repeat="employee in employees | orderBy:sortBy | filter:enteredValue">
+      <td>{{employee.Name}}</td>
+      <td>{{employee.Address}}</td>
+      <td>{{employee.Billablity}}</td>
+      <td>{{employee.Joining_Date}}</td>
+      <td>{{employee.Billing_Date}}</td>
+        <td>{{employee.Billing_Amount | number}}</td>
+      <td>{{employee.Paid}}</td>
+	  <td>Edit</td> 
+	 <td>
+		<input type="button" value="Remove" class="btn btn-primary" ng-click="removeRow()"/>
+		</td>
+            </tr>
+     </tbody>
+     </table>
+     </div>
+     </div>
+</div>

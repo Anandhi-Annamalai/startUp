@@ -1,0 +1,47 @@
+<html lang="en">
+    <head>
+    	
+        <title>Homepage | Discover Bank</title> 
+        <script src="scripts/src/angular.min.js"></script>   
+        <script type="text/javascript" src="scripts/app.js"></script> 
+		<script type="text/javascript" src="scripts/controller.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="scripts/src/angular-messages.js"></script>
+    <link rel="stylesheet" href="css/utilize.css"> 
+    </head>
+
+    <body ng-app="validationApp">
+<button>Export</button>
+<tr class="noExl">
+
+  <th>#</th>
+
+  <th>Column heading</th>
+
+  <th>Column heading</th>
+
+  <th>Column heading</th>
+
+</tr>
+
+    <script>
+$("button").click(function(){
+
+  $("#table2excel").table2excel({
+
+    // exclude CSS class
+
+    exclude: ".noExl",
+
+    name: "Excel Document Name"
+
+  });
+
+});
+
+</script>
+</body>
+</html>

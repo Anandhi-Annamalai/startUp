@@ -4,7 +4,7 @@
 
 
 <?php
-header( 'Location: https://startupbyme.herokuapp.com' ) ;
+header( 'Location: https://startupbyme.herokuapp.com/index.html' ) ;
 ?>
 
 </body>

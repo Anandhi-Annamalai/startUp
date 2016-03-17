@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+
+  <title>Homepage | Discover Bank</title> 
+  <script src="scripts/src/angular.min.js"></script>  
+  <script type="text/javascript" src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script> 
+  <script type="text/javascript" src="scripts/app.js"></script> 
+  <script type="text/javascript" src="scripts/router.js"></script>   
+  <script type="text/javascript" src="scripts/controller.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <script src="scripts/src/angular-messages.js"></script>
+  <link rel="stylesheet" href="css/utilize.css"> 
+</head>
+
+<body ng-app="validationApp">
+  <div  ng-controller="mainController">
+    <div class="container-fluid">
+      <nav class="navbar navbar-default" style="background-color: #000645;border: #000645;');">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+      <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button> -->
+      <a class="navbar-brand" href="#home">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class=""><a href="#gallery">Gallery<span class="sr-only"></span></a></li>
+        <li><a href="#employeeDetails">Employee Details</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modules <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Developement</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Enhancment</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#about">Support</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Finance</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#signUp">SignUp</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>  <div id="opinion"><span class="glyphicon glyphicon-thumbs-up" ng-click="count1 = count1 + 1"></span></span>{{count1}}<span>&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-thumbs-down" ng-click="count2 = count2 + 1"></span>{{count2}}<span></span>
+    </div>
+    <div id="login" style="float:right;">
+    
+      <a id="login-trigger" href="#">
+        Log in
+      </a>
+      <div id="login-content">
+       <form name="userForm" id="userForm" novalidate>
+
+        <!-- name field -->
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="name" class="form-control" 
+          ng-model="name"
+          ng-minlength="5"
+          ng-maxlength="10"
+          required>
+          <div class="help-block" ng-messages="userForm.name.$error" ng-if="userForm.name.$touched">
+            <p ng-message="minlength">Your name is too short.</p>
+            <p ng-message="maxlength">Your name is too long.</p>
+            <p ng-message="required">Your name is required.</p>
+          </div>  
+          <!-- ngMessages goes here -->
+        </div>
+        <!-- email field -->
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" class="form-control" 
+          ng-model="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/"
+          required>
+
+          <!-- ngMessages goes here -->
+          <div class="help-block" ng-messages="userForm.email.$error" ng-if="userForm.email.$touched">
+            <p ng-message="pattern">Please enter a valid email address!</p>
+            <p ng-message="required">Your email is required.</p>
+          </div>  
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+        
+      </form>
+    </div>                     
+  </div>
+</nav>
+<div ng-view>
+</div>
+</div><!-- /.container-fluid -->
+</div>
+</div>
+<script>
+  $(document).ready(function(){
+    $('#login-trigger').click(function(){
+      $(this).next('#login-content').slideToggle();
+      $(this).toggleClass('active');          
+
+      if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+      else $(this).find('span').html('&#x25BC;')
+    })
+  });
+</script>
+
+</body>
+</html>

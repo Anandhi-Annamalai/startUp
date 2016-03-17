@@ -1,5 +1,5 @@
 app.controller('mainController', function($scope,$http) {
-    var employee=$http.get("http://www.json-generator.com/api/json/get/bIJJxLsLVK?indent=2")
+    var employee=$http.get("https://www.json-generator.com/api/json/get/bIJJxLsLVK?indent=2")
     .then(function(response) {$scope.employees= response.data.records;});
 	$scope.sortBy="Name";
 	$scope.removeRow = function(){				

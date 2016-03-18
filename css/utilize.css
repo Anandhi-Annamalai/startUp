@@ -71,8 +71,9 @@ font-weight:bold;
   box-shadow: 0 0 0 1px #e8c291 inset;
 }
 nav #login {
-  border-right: 1px solid #ddd;
-  box-shadow: 1px 0 0 #fff;  
+ 
+  float: right;
+    margin: -36px 17px 1px 10px;
 }
 
 nav #login-trigger,

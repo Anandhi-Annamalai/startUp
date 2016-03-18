@@ -1,0 +1,112 @@
+{
+  "records": [
+    {
+      "Name": "Anandhi Krithika", 
+      "Billing_Amount": 75000, 
+      "Paid": "yes", 
+      "Billablity": "Yes", 
+      "Address": "Shamshabad,Hyderabad,Telangana-500409, India", 
+      "Billing_Date": "20/Dec/2013", 
+      "Joining_Date": "16/Dec/2013"
+    }, 
+    {
+      "Name": "Susruthi Yenduri", 
+      "Billing_Amount": 85000, 
+      "Paid": "No", 
+      "Billablity": "Yes", 
+      "Address": "Mehdipatnam,Hyderabad,Telangana-500409", 
+      "Billing_Date": "30/Jan/2014", 
+      "Joining_Date": "20/Dec/2013"
+    }, 
+    {
+      "Name": "Nanditha Chapparam", 
+      "Billing_Amount": 65000, 
+      "Paid": "yes", 
+      "Billablity": "Yes", 
+      "Address": "Madhapur,Hyderabad,Telangana-500409", 
+      "Billing_Date": "30/Feb/2014", 
+      "Joining_Date": "25/Feb/2014"
+    }, 
+    {
+      "Name": "Tejaswi Adigarla", 
+      "Billing_Amount": 68000, 
+      "Paid": "Yes", 
+      "Billablity": "Yes", 
+      "Address": "NizamNagar,Hyderabad,Telangana-500409", 
+      "Billing_Date": "20/Dec/2013", 
+      "Joining_Date": "18/Dec/2013"
+    }, 
+    {
+      "Name": "Vernisha Vedaraj", 
+      "Billing_Amount": 63000, 
+      "Paid": "No", 
+      "Billablity": "Yes", 
+      "Address": "DilshukNagar,Hyderabad,Telangana-500409", 
+      "Billing_Date": "31/Jan/2014", 
+      "Joining_Date": "19/Dec/2013"
+    }, 
+    {
+      "Name": "Sudheeshna Ullam", 
+      "Billing_Amount": 70000, 
+      "Paid": "No", 
+      "Billablity": "Yes", 
+      "Address": "Gacchibowli,Hyderabad,Telangana-500409", 
+      "Billing_Date": "25/Dec/2013", 
+      "Joining_Date": "23/Dec/2013"
+    }, 
+    {
+      "Name": "Darshini Patra", 
+      "Billing_Amount": 75000, 
+      "Paid": "yes", 
+      "Billablity": "Yes", 
+      "Address": "Shamshabad,Hyderabad,Telangana-500409, India", 
+      "Billing_Date": "20/Dec/2013", 
+      "Joining_Date": "16/Dec/2013"
+    }, 
+    {
+      "Name": "Bargav Pothiraju", 
+      "Billing_Amount": 85000, 
+      "Paid": "No", 
+      "Billablity": "Yes", 
+      "Address": "Mehdipatnam,Hyderabad,Telangana-500409", 
+      "Billing_Date": "30/Jan/2014", 
+      "Joining_Date": "20/Dec/2013"
+    }, 
+    {
+      "Name": "Suman Mondal", 
+      "Billing_Amount": 65000, 
+      "Paid": "yes", 
+      "Billablity": "Yes", 
+      "Address": "Madhapur,Hyderabad,Telangana-500409", 
+      "Billing_Date": "30/Feb/2014", 
+      "Joining_Date": "25/Feb/2014"
+    }, 
+    {
+      "Name": "Saurav Sinha", 
+      "Billing_Amount": 68000, 
+      "Paid": "Yes", 
+      "Billablity": "Yes", 
+      "Address": "NizamNagar,Hyderabad,Telangana-500409", 
+      "Billing_Date": "20/Dec/2013", 
+      "Joining_Date": "18/Dec/2013"
+    }, 
+    {
+      "Name": "Rahul Patel", 
+      "Billing_Amount": 63000, 
+      "Paid": "No", 
+      "Billablity": "Yes", 
+      "Address": "DilshukNagar,Hyderabad,Telangana-500409", 
+      "Billing_Date": "31/Jan/2014", 
+      "Joining_Date": "19/Dec/2013"
+    }, 
+    {
+      "Name": "Kartheek Sarabu", 
+      "Billing_Amount": 70000, 
+      "Paid": "No", 
+      "Billablity": "Yes", 
+      "Address": "Gacchibowli,Hyderabad,Telangana-500409", 
+      "Billing_Date": "25/Dec/2013", 
+      "Joining_Date": "23/Dec/2013"
+    }
+  ]
+}

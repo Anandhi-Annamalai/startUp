@@ -1,0 +1,114 @@
+=================================2 arrays in single array==================================
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<button type="button"
+onclick="console.log(collect(a,b,c));">
+Click me to display Date and Time.</button>
+<button type="button"
+onclick="console.log(collect(d,e,f))">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+<script>
+a = { "name" : "anandhi" };
+b = { "age" : 23 };
+c = { "Gender" : "Female" };
+d = { "name" : "annamalai" };
+e= { "age" : 45 };
+f = { "Gender" : "Male" };
+
+function collect() {
+
+var ret={};  
+var len = arguments.length;
+  for (var i=0; i<len; i++) {
+//alert("len" +"="+len );
+    for (p in arguments[i]) {
+      if (arguments[i].hasOwnProperty(p)) {
+        ret[p] = arguments[i][p];
+
+      }
+    }
+  }
+  return ret;
+
+
+
+}
+
+var concat=[];
+var d1=collect(a,b,c);
+var d2=collect(d,e,f);
+concat.push(d1,d2);
+//alert(JSON.stringify(concat));
+var reConcat=[];
+var len2=concat.length;
+for(j=0;j<len2;j++){
+text=concat[j].name;
+reConcat.push([text,concat[j]]);
+
+//console.log(JSON.stringify(concat));
+console.log(JSON.stringify(reConcat));
+}
+</script>
+</body>
+</html> 
+=================================2 objects in single array==================================
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<button type="button"
+onclick="console.log(collect(a,b,c));">
+Click me to display Date and Time.</button>
+<button type="button"
+onclick="console.log(collect(d,e,f))">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+<script>
+a = { "name" : "anandhi" };
+b = { "age" : 23 };
+c = { "Gender" : "Female" };
+d = { "name" : "annamalai" };
+e= { "age" : 45 };
+f = { "Gender" : "Male" };
+
+function collect() {
+
+var ret={};  
+var len = arguments.length;
+  for (var i=0; i<len; i++) {
+//alert("len" +"="+len );
+    for (p in arguments[i]) {
+      if (arguments[i].hasOwnProperty(p)) {
+        ret[p] = arguments[i][p];
+
+      }
+    }
+  }
+  return ret;
+
+
+
+}
+
+var concat=[];
+var d1=collect(a,b,c);
+var d2=collect(d,e,f);
+concat.push(d1,d2);
+alert(JSON.stringify(concat));
+var arrayObject=[];
+for(var i=0;i<concat.length;i++){
+	arrayObject.push(JSON.parse("{\""+concat[i].name+"\":"+ JSON.stringify(concat[i])+"}")) ;
+}
+console.log(arrayObject);
+</script>
+</body>
+</html> 
